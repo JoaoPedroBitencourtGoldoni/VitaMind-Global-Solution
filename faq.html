@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estiloG.css">
+    <link rel="stylesheet" href="css/estiloM.css">
+    <link rel="stylesheet" href="css/estiloP.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+    <img src="IMAGENS/VITA - LOGO2.jpg" alt="Logo VitaMind" width="50" />
+    </a>
+    <br>
+    <nav class="menu-links">
+      <a href="apoio.html">Apoio Emocional</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contato.html">Contato de Emergência</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <div id="sideMenu">
+    <h3>MENU</h3>
+    <a href="index.html">Início</a>
+    <a href="apoio.html">Apoio Emocional</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contato.html">Contato de Emergência</a>
+
+  </div>
+
+  <section class="faq">
+  <h2>Perguntas Frequentes</h2>
+  <div class="faq-item">
+    <button class="faq-question">Como funciona o apoio emocional?</button>
+    <div class="faq-answer">
+      <p>Nosso apoio emocional é feito por meio de chatbot com orientação psicológica de primeiros socorros e encaminhamento adequado, quando necessário.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Posso conversar com um especialista real?</button>
+    <div class="faq-answer">
+      <p>No momento, nosso sistema oferece orientação automatizada. Em casos de urgência, você será orientado a procurar ajuda profissional presencial.</p>
+    </div>
+  </div> 
+
+  <!-- Adicione mais perguntas conforme necessário -->
+</section>
+
+<section class="chatbot">
+  <h2>Converse com a VitaMind</h2>
+  <div class="chat-window">
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">Olá! Eu sou a Vita. Como você está se sentindo hoje?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Digite sua mensagem..." />
+      <button onclick="sendMessage()">Enviar</button>
+    </div>
+  </div>
+</section>
+
+
+  
+  <footer>
+    Copyright © 2025 VitaMind
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+    
+  // Expande/collapse respostas
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Envia mensagem para o "chatbot"
+  function sendMessage() {
+    const input = document.getElementById("userInput");
+    const message = input.value.trim();
+    if (message === "") return;
+
+    const chatBox = document.getElementById("chatMessages");
+
+    const userMsg = document.createElement("div");
+    userMsg.className = "message user";
+    userMsg.innerText = message;
+    chatBox.appendChild(userMsg);
+
+    // Resposta do "bot"
+    const botMsg = document.createElement("div");
+    botMsg.className = "message bot";
+    botMsg.innerText = respostaSimples(message);
+    chatBox.appendChild(botMsg);
+
+    input.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+function respostaSimples(msg) {
+  msg = msg.toLowerCase();
+
+  if (msg.includes("triste")) return "Sinto muito por isso. Quer conversar sobre o que te deixou assim?";
+  if (msg.includes("ansioso") || msg.includes("ansiedade")) return "Tente respirar fundo comigo. Inspire por 4 segundos, segure por 4, expire por 4.";
+  if (msg.includes("sozinho") || msg.includes("sozinha")) return "Você não está sozinho. Estou aqui com você. ❤️";
+  if (msg.includes("medo")) return "Ter medo é normal. Quer me contar o que está assustando você?";
+  if (msg.includes("cansado") || msg.includes("cansada")) return "Descanse um pouco, seu bem-estar é importante.";
+  if (msg.includes("chorando") || msg.includes("choro")) return "Chorar alivia a alma. Estou aqui, você pode desabafar comigo.";
+  if (msg.includes("feliz")) return "Fico feliz por você! Quer compartilhar o motivo da sua alegria?";
+  if (msg.includes("raiva")) return "Respirar fundo pode ajudar. Quer falar sobre o que causou isso?";
+  if (msg.includes("depressivo") || msg.includes("depressiva") || msg.includes("depressão")) return "Sinto muito. Você merece cuidado. Posso te sugerir um apoio emocional?";
+  if (msg.includes("angustiado") || msg.includes("angustiada") || msg.includes("angústia")) return "Sinta-se acolhido. Essa sensação passa, estou com você.";
+  if (msg.includes("preciso de ajuda")) return "Você pode contar comigo. Vamos conversar e encontrar juntos um caminho.";
+  if (msg.includes("isolado") || msg.includes("isolamento")) return "O isolamento pode ser difícil. Estou aqui para te ouvir.";
+  if (msg.includes("culpa")) return "A culpa machuca. Que tal conversarmos sobre isso com carinho?";
+  if (msg.includes("vergonha")) return "Não há vergonha em sentir. Tudo o que você sente é válido.";
+  if (msg.includes("nervoso") || msg.includes("nervosa")) return "Tente relaxar os ombros e respirar fundo. Estou aqui.";
+  if (msg.includes("confuso") || msg.includes("confusa")) return "Tudo bem estar confuso às vezes. Posso te ajudar a organizar os pensamentos?";
+  if (msg.includes("quero sumir")) return "Você é importante. Sua presença faz falta. Fale comigo, vamos conversar.";
+  if (msg.includes("não aguento mais")) return "Sinto muito que esteja se sentindo assim. Você é forte, e vamos passar por isso juntos.";
+  if (msg.includes("sem sentido") || msg.includes("sentido na vida")) return "A vida às vezes parece sem direção, mas isso pode mudar. Vamos conversar?";
+  if (msg.includes("autoestima") || msg.includes("me sinto feio") || msg.includes("me odeio")) return "Você tem valor, mesmo quando não consegue ver isso. Estou aqui por você. 💙";
+
+  return "Entendo. Estou aqui com você. Pode me contar mais? 💬";
+}
+
+
+
+  </script>
+</body>
+</html>

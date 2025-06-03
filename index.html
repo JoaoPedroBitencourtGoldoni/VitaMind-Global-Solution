@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitaMind</title>
+  <link rel="stylesheet" href="css/estiloG.css" />
+  <link rel="stylesheet" href="css/estiloM.css" />
+  <link rel="stylesheet" href="css/estiloP.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <a href="index.html" class="logo">
+    <img src="IMAGENS/VITA - LOGO2.jpg" alt="Logo VitaMind" width="50" />
+    </a>
+    <br>
+   <nav class="menu-links">
+  <a href="apoio.html">Apoio Emocional</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contato.html">Contato de Emergência</a>
+   </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Menu Lateral -->
+  <div id="sideMenu">
+    <h3>MENU</h3>
+    <a href="index.html">Início</a>
+    <a href="apoio.html">Apoio Emocional</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contato.html">Contato de Emergência</a>
+  </div>
+
+  <!-- Seção Principal -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bem-vindo ao VitaMind</h1>
+      <p>Seu espaço de apoio emocional durante momentos difíceis.</p>
+      <a href="#sobre" class="hero-button">Saiba mais</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <div class="card-sobre">
+      <h2>Sobre o <span>VitaMind</span></h2>
+      <p>
+        O VitaMind é uma iniciativa acadêmica desenvolvida por estudantes da FIAP, que busca oferecer
+        suporte emocional digital e acessível em contextos de emergência.
+      </p>
+      <p>
+        Utilizamos inteligência artificial (<strong>Watson Assistant</strong>), design centrado no usuário e acessibilidade para
+        atender pessoas em situações de vulnerabilidade emocional, especialmente em desastres ambientais.
+      </p>
+    </div>
+  </section>
+  <!--o projeto-->
+  <section id="projeto" class="projeto">
+    <h2>O Projeto</h2>
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab(event, 'sobre')">Projeto</button>
+        <button class="tab-btn" onclick="openTab(event, 'objetivo')">Objetivo</button>
+        <button class="tab-btn" onclick="openTab(event, 'tecnologia')">Tecnologia</button>
+        <button class="tab-btn" onclick="openTab(event, 'publico')">Público-alvo</button>
+      </div>
+
+      <div class="tab-content active" id="tab-sobre">
+        <p>O VitaMind é uma iniciativa acadêmica desenvolvida por estudantes da FIAP, que busca oferecer suporte </p>
+        <p>digital e acessível em contextos de emergência.</p>
+      </div>
+
+      <div class="tab-content" id="tab-objetivo">
+        <p>Nosso principal objetivo é auxiliar pessoas em situações de crise climática ou emocional, oferecendo </p>
+        <p>socorros psicológicos por meio de um chatbot empático e acessível.</p>
+      </div>
+
+      <div class="tab-content" id="tab-tecnologia">
+        <p>Utilizamos tecnologias como <strong>Watson Assistant</strong>, HTML/CSS/JS, Python para lógica de urgência, e </p>
+        <p>integração com <strong>Telegram</strong> e <strong>Node-RED</strong>.</p>
+      </div>
+
+      <div class="tab-content" id="tab-publico">
+        <p>Voltado para pessoas afetadas por desastres ambientais, com foco em acessibilidade e suporte emocional.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+  <!-- Frase Motivacional -->
+  <section class="frase-motivacional" id="fraseMotivacional">
+    “A sua existência é importante. O que você sente importa.”
+  </section>
+
+  <!-- Dicas -->
+  <section class="dicas">
+    <div class="card">
+      <h3>🧘‍♀️ Respire profundamente</h3>
+      <p>Feche os olhos por 1 minuto. Inspire pelo nariz, segure por 4 segundos e expire pela boca.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎧 Faça algo que te acalme</h3>
+      <p>
+        Escute sua música favorita ou 
+        <a href="https://youtube.com/playlist?list=PLDUAx1zZF7lsggPTGTLY4WoOM4O2dZHJM&si=sX0pGgIZfv210WVq" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           style="color: #2a7f62; text-decoration: underline;">
+          ouça esta playlist relaxante no YouTube
+        </a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📖 Leia um livro ou artigo</h3>
+      <p>Escolha um tema que te interesse e mergulhe na leitura.</p>
+    </div>
+  </section>
+
+  
+  
+
+  <!-- Equipe -->
+  <section id="equipe" class="equipe">
+    <h2>Conheça a <span>Equipe VitaMind</span></h2>
+    <div class="container-membros">
+
+      <!-- Membro 1 -->
+      <div class="membro">
+        <img src="IMAGENS/aluno1.jpg" alt="aluno1" />
+        <h3>Bruno Vinicius Barbosa</h3>
+        <p>RM: 566366</p>
+        <div class="redes">
+          <a href="https://www.linkedin.com/in/brunovbarbosaa" target="_blank" title="LinkedIn">
+            <img src="https://th.bing.com/th/id/OIP.wXu7EemBf_zTRrcepkjkAQHaHa?cb=iwc2" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/brunovinicius02" target="_blank" title="GitHub">
+            <img src="https://th.bing.com/th/id/R.7a864f07681f187fb572468bfc949977?rik=3fUik6Pc6xTrHQ&pid=ImgRaw&r=0" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Membro 2 -->
+      <div class="membro">
+        <img src="IMAGENS/aluno2.jpg" alt="aluno2" />
+        <h3>João Pedro Bitencourt Goldoni</h3>
+        <p>RM: 564339</p>
+        <div class="redes">
+          <a href="https://www.linkedin.com/in/joaopedrogoldoni" target="_blank" title="LinkedIn">
+            <img src="https://th.bing.com/th/id/OIP.wXu7EemBf_zTRrcepkjkAQHaHa?cb=iwc2" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/JoaoPedroBitencourtGoldoni" target="_blank" title="GitHub">
+            <img src="https://th.bing.com/th/id/R.7a864f07681f187fb572468bfc949977?rik=3fUik6Pc6xTrHQ&pid=ImgRaw&r=0" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Membro 3 -->
+      <div class="membro">
+        <img src="IMAGENS/aluno3.jpg" alt="aluno3" />
+        <h3>Marina Tamagnini Magalhães</h3>
+        <p>RM: 561786</p>
+        <div class="redes">
+          <a href="https://www.linkedin.com/in/marina-t-36b14328b" target="_blank" title="LinkedIn">
+            <img src="https://th.bing.com/th/id/OIP.wXu7EemBf_zTRrcepkjkAQHaHa?cb=iwc2" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/marina-2907" target="_blank" title="GitHub">
+            <img src="https://th.bing.com/th/id/R.7a864f07681f187fb572468bfc949977?rik=3fUik6Pc6xTrHQ&pid=ImgRaw&r=0" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    Copyright © 2025 VitaMind
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+
+    function openTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById('tab-' + tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>

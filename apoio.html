@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apoio Emocional - VitaMind</title>
+  <link rel="stylesheet" href="css/estiloG.css">
+  <link rel="stylesheet" href="css/estiloM.css">
+  <link rel="stylesheet" href="css/estiloP.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+    <img src="IMAGENS/VITA - LOGO2.jpg" alt="Logo VitaMind" width="50" />
+    </a>
+    <br>
+    <nav class="menu-links">
+      <a href="apoio.html">Apoio Emocional</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contato.html">Contato de Emergência</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <div id="sideMenu">
+    <h3>MENU</h3>
+    <a href="index.html">Início</a>
+    <a href="apoio.html">Apoio Emocional</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contato.html">Contato de Emergência</a>
+  </div>
+
+  <main class="apoio">
+    <center>
+      <h1>Apoio Emocional - VitaMind</h1>
+      <p class="mensagem">Aqui no VitaMind você não está sozinho. Estamos aqui para caminhar com você, um passo de cada vez.</p>
+    </center><br>
+
+    <section class="frase-motivacional" id="fraseMotivacional">
+      “A sua existência é importante. O que você sente importa.”
+    </section>
+
+    <!-- Cartões com dicas emocionais -->
+    <section class="dicas">
+      <div class="card">
+        <h3>🧘‍♀️ Respire profundamente</h3>
+        <p>Feche os olhos por 1 minuto. Inspire pelo nariz, segure por 4 segundos e expire pela boca.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎧 Faça algo que te acalme</h3>
+        <p>
+          Escute sua música favorita ou 
+          <a href="https://youtube.com/playlist?list=PLDUAx1zZF7lsggPTGTLY4WoOM4O2dZHJM&si=sX0pGgIZfv210WVq" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             style="color: #2e7397; text-decoration: underline;">
+             ouça esta playlist relaxante no YouTube
+          </a>.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>✍️ Escreva um desabafo</h3>
+        <p>
+          Coloque em palavras o que está sentindo. 
+          <a href="data:text/plain,Como você está se sentindo hoje?" 
+             download="meu-desabafo.txt"
+             style="color: #2e7397; text-decoration: underline;">
+             Clique aqui para abrir um bloco de notas
+          </a> e escrever o que quiser.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>💬 Fale com alguém</h3>
+        <p>Procure alguém de confiança ou clique no botão abaixo para conversar com nosso assistente.</p>
+        <button onclick="window.location.href='faq.html';" 
+                style="background-color: #2b8896; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer;">
+          🗨️ Conversar agora
+        </button>
+      </div>
+    </section>
+    
+    
+
+    <!-- Sugestões rápidas -->
+    <section class="atividades">
+      <h2>Sugestões de atividades rápidas</h2>
+      <ul>
+        <li>🎵 Ouça uma música tranquila no YouTube</li>
+        <li>🧘‍♂️ Veja um vídeo de 2 minutos de respiração guiada</li>
+        <li>🌍 Coloque os pés no chão e sinta o contato com o presente</li>
+        <li>💧 Beba um copo d’água</li>
+        <li>☁️ Abra uma janela e observe o céu por 1 minuto</li>
+      </ul>
+    </section>
+
+    <!-- Botão de emergência -->
+    <div class="emergencia">
+      <a href="contato.html" class="botao-emergencia">🚨 Contato de Emergência</a>
+    </div>
+  </main>
+
+  <footer>
+    Copyright © 2025 VitaMind
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+
+    const frases = [
+      "Você é mais forte do que imagina.",
+      "Respirar fundo é um ótimo começo.",
+      "Tudo bem não estar bem às vezes.",
+      "O cuidado com você também importa.",
+      "Um passo de cada vez já é progresso."
+    ];
+    document.getElementById("fraseMotivacional").innerText =
+      "🌟 " + frases[Math.floor(Math.random() * frases.length)] + " 🌟";
+      
+      function toggleAudio() {
+    const musica = document.getElementById("musicaFundo");
+    if (musica.paused) {
+      musica.play();
+    } else {
+      musica.pause();
+    }
+  }
+  
+  </script>
+
+</body>
+</html>

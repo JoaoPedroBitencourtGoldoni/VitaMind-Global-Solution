@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estiloG.css">
+    <link rel="stylesheet" href="css/estiloM.css">
+    <link rel="stylesheet" href="css/estiloP.css">
+</head>
+<body>
+  <header>
+   <a href="index.html" class="logo">
+    <img src="IMAGENS/VITA - LOGO2.jpg" alt="Logo VitaMind" width="50" />
+    </a>
+    <br>
+    <nav class="menu-links">
+      <a href="apoio.html">Apoio Emocional</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contato.html">Contato de Emergência</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <div id="sideMenu">
+    <h3>MENU</h3>
+    <a href="index.html">Início</a>
+    <a href="apoio.html">Apoio Emocional</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contato.html">Contato de Emergência</a>
+  
+  </div>
+  <main class="card-contato-vita">
+  <h1 class="titulo-alerta">🚨 Contato de Emergência</h1>
+  <p>Se você estiver em uma situação de crise, entre em contato com um dos serviços abaixo:</p>
+
+  <ul class="lista-urgente-vita">
+    <li><strong>CVV:</strong> 188</li>
+    <li><strong>SAMU:</strong> 192</li>
+    <li><strong>Bombeiros:</strong> 193</li>
+    <li><strong>Polícia:</strong> 190</li>
+    <li><strong>Disque 100:</strong> Direitos Humanos</li>
+  </ul>
+
+  <section class="bloco-ajuda-vita">
+    <h2 class="titulo-ajuda">📞 Apoio Emocional VitaMind</h2>
+    <p>Envie uma mensagem por:</p>
+    <ul class="lista-ajuda-vita">
+      <li>Email: <a href="mailto:apoio@vitamind.org">apoio@vitamind.org</a></li>
+      <li>WhatsApp: <a href="#">(00) 00000-0000</a></li>
+    </ul>
+  </section>
+</main>
+
+  <footer>
+    Copyright © 2025 VitaMind
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+</body>
+</html>
