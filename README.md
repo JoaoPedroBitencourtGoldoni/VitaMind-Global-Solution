@@ -83,4 +83,6 @@ Este projeto é aberto, voltado para disseminação de conhecimento, compartilha
 inovação em saúde digital. Licenciado para uso livre em ambientes de ensino, pesquisa e desenvolvimento acadêmico. 
 Credite autores em reproduções ou derivados sempre que possível.
 
+**Endereço do Repositório no GitHub**
+https://github.com/JoaoPedroBitencourtGoldoni/VitaMind-Global-Solution
 
