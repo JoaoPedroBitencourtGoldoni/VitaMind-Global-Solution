@@ -69,8 +69,12 @@ Feedback Visual: Mensagens claras para ações do usuário, minimizando ambiguid
 | 27/05/2025 | Bruno         | Desenvolvimento das páginas de apoio e contato       |
 | 27/05/2025 | Bruno         | Criação das páginas de FAQ e index                   |
 | 30/05/2025 | Marina        | Estilização responsiva das páginas                   |
+| 30/05/2025 | Marina        | Registro anônimo do histórico emocional              |
+| 30/05/2025 | Bruno         | Correção de bugs e melhorias no CSS                  |
 | 30/05/2025 | João Pedro    | Otimização das imagens e ajustes gerais              |
+| 01/06/2025 | Marina        | Navegação entre páginas                              |
 | 03/06/2025 | João Pedro    | Revisão final e documentação                         |
+| 03/06/2025 | João Pedro    | Atualização do README e organização                  |
 
 **Considerações Gerais E limitações**
 
